@@ -7,10 +7,13 @@ import { signupRouter } from './routes/signup';
 import { signoutRouter } from './routes/signout';
 import { errorHandler } from './middlewares/error-handler';
 import { NotFoundError } from './errors/not-found-error';
-import { startMongo } from './config/mongodb'
+import { startMongo } from './config/mongodb';
+import cookieSession from 'cookie-session';
 
 const app = express();
+app.set('trust proxy', true);
 app.use(json());
+app.use(cookieSession({  signed: false, secure: true }));
 
 app.use(currentUserRouter);
 app.use(signinRouter);
