@@ -18,3 +18,13 @@ build:
         manual:
           - src: 'src/**/*.ts'
             dest: .
+    - image: neddy10/client
+      context: client
+      docker:
+        dockerfile: Dockerfile
+        cacheFrom:
+          - neddy10/client
+      sync:
+        manual:
+          - src: '**/*.js'
+            dest: .
