@@ -70,3 +70,16 @@ fetch('https://kobo3660.atlassian.net/rest/api/3/user?accountId=60febc29ae72b200
   })
   .then(text => console.log(text))
   .catch(err => console.error(err));
+
+  // return <div>
+  //       <h1>Lammie</h1>
+  //       <p style={{color:"red", fontStyle: "italic"}}>Sexiest lips I've seen in a while💋</p>
+  //       <br />
+  //       <div style={{width: '300px', height:'300px', position: "relative"} }>
+  //           <Image 
+  //               src='/Lammie.jpeg'
+  //               layout="fill" 
+  //           />
+  //       </div>
+        
+  //   </div>
